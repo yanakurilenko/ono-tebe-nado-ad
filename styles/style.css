@@ -1,11 +1,11 @@
 /* =========================================
-   ШАПКА САЙТА (HEADER)
+   ШАПКА САЙТА (HEADER) — больше белого сверху
    ========================================= */
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 50px 60px;
+    padding: 70px 60px 50px 60px;  /* ← сверху было 50px, стало 70px */
     box-sizing: border-box;
 }
 
@@ -57,22 +57,23 @@
 }
 
 /* =========================================
-   АДРЕС (ОБЩИЙ)
+   АДРЕС
    ========================================= */
 .address {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* ← было flex-end, вернули влево */
+    align-items: flex-start;
     font-style: normal;
     font-size: 18px;
     line-height: 1.4;
-    text-align: left;  /* ← было right, теперь left */
+    text-align: left;
 }
 
 .header__address {
-    justify-self: end;  /* блок остаётся в правой колонке */
+    justify-self: end;
     max-width: 240px;
 }
+
 .address__link {
     color: #000;
     text-decoration: none;
@@ -87,15 +88,15 @@
 }
 
 /* =========================================
-   ОБЛОЖКА (COVER) — увеличена
+   ОБЛОЖКА (COVER)
    ========================================= */
 .cover {
     background-image: url('../images/cover.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 900px;  /* ← было 850px, увеличено */
+    min-height: 920px;  /* ← было 900px, сайт длиннее */
     position: relative;
-    padding: 220px 60px 100px 60px;  /* ← больше отступы */
+    padding: 220px 60px 100px 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -121,7 +122,7 @@
 .cover__title {
     margin: 0;
     color: #fff;
-    font-size: 120px;  /* ← было 110px */
+    font-size: 120px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 14px;
@@ -136,12 +137,16 @@
     text-align: left;
 }
 
+/* "ТЕБЕ" чуть левее центра */
 .aligned-text_center {
     text-align: center;
+    padding-right: 8%;  /* ← сдвигает текст левее центра */
 }
 
+/* "НАДО" — буква Н под буквой Е из "ТЕБЕ" */
 .aligned-text_right {
     text-align: right;
+    padding-right: 22%;  /* ← сдвигает "НАДО" левее, Н встаёт под Е */
 }
 
 .cover__description {
@@ -154,7 +159,7 @@
     margin: 0;
     color: #fff;
     font-size: 24px;
-    word-spacing: 18px;
+    word-spacing: 22px;  /* ← было 18px, пробелы между словами больше */
     text-transform: uppercase;
 }
 
@@ -176,33 +181,33 @@
 }
 
 /* =========================================
-   СЕКЦИЯ ЛОТЫ (LOTS) — исправлено
+   СЕКЦИЯ ЛОТЫ (LOTS)
    ========================================= */
 .lots {
-    padding: 80px 60px 140px 60px;  /* ← сверху уменьшено (было 140px), снизу увеличено */
+    padding: 110px 60px 160px 60px;  /* ← сверху было 80px, стало 110px (лоты ниже); снизу больше для длины сайта */
     box-sizing: border-box;
 }
 
 .lots__heading {
-    font-size: 52px;  /* ← было 44px, увеличено */
+    font-size: 52px;
     text-transform: uppercase;
     margin-bottom: 40px;
-    margin-left: 0;
+    margin-left: 60px;  /* ← "ЛОТЫ" правее начала карточек */
 }
 
 .lots__card-list {
     list-style: none;
     padding: 0;
-    margin: 0 auto 40px auto;  /* ← auto по бокам для центрирования */
+    margin: 0 auto 40px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;  /* ← центрирование карточек */
-    max-width: 1100px;  /* ← ограничиваем ширину списка */
+    justify-content: center;
+    max-width: 1140px;  /* ← было 1100px, карточки чуть шире */
 }
 
 .lots__card-list-item {
-    width: 330px;  /* ← было 330px, увеличено */
+    width: 345px;  /* ← было 330px, карточки шире */
     min-height: 720px;
 }
 
@@ -252,13 +257,14 @@
 }
 
 .card__text {
-    font-size: 19px;  /* ← было 19px, уменьшено */
+    font-size: 19px;
     line-height: 1.5;
 }
 
+/* "посмотреть больше" СЛЕВА */
 .lots__look-more-link {
     display: block;
-    margin: 0 auto;  /* ← центрирование ссылки */
+    margin-left: 60px;  /* ← было 0 auto (по центру), теперь слева на уровне заголовка */
     font-size: 22px;
     color: #000;
     text-decoration: none;
@@ -273,7 +279,7 @@
     display: grid;
     grid-template-columns: 240px 1fr;
     gap: 70px;
-    padding: 120px 60px;
+    padding: 140px 60px 160px 60px;  /* ← увеличены отступы для длины сайта */
     align-items: start;
     box-sizing: border-box;
 }
@@ -313,7 +319,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    max-width: 620px;  /* ← было 640px, уменьшили на 20px */
+    max-width: 620px;
 }
 
 .about__text p {
@@ -328,7 +334,7 @@
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 80px 60px;
+    padding: 100px 60px;  /* ← было 80px, сайт длиннее */
     align-items: start;
     box-sizing: border-box;
 }
@@ -349,7 +355,7 @@
 }
 
 .footer__menu-list-item {
-    margin-bottom: 12px;
+    margin-bottom: 6px;  /* ← было 12px, расстояние между строчками меньше */
 }
 
 .footer__menu-link {
@@ -371,7 +377,7 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 15px;
+    gap: 25px;  /* ← было 15px, расстояние между соцсетями больше */
     justify-self: end;
     align-items: center;
 }
@@ -395,7 +401,7 @@
    ========================================= */
 @media (max-width: 1100px) {
     .header {
-        padding: 30px 30px;
+        padding: 50px 30px 30px 30px;
         gap: 15px;
     }
 
@@ -429,9 +435,17 @@
         letter-spacing: 12px;
     }
 
+    .aligned-text_center {
+        padding-right: 5%;
+    }
+
+    .aligned-text_right {
+        padding-right: 15%;
+    }
+
     .cover__description-text {
         font-size: 20px;
-        word-spacing: 14px;
+        word-spacing: 16px;
     }
 
     .bet-button {
@@ -440,11 +454,12 @@
     }
 
     .lots {
-        padding: 60px 30px 100px 30px;
+        padding: 80px 30px 120px 30px;
     }
 
     .lots__heading {
         font-size: 44px;
+        margin-left: 30px;
     }
 
     .lots__card-list {
@@ -469,8 +484,12 @@
         font-size: 15px;
     }
 
+    .lots__look-more-link {
+        margin-left: 30px;
+    }
+
     .about {
-        padding: 90px 40px;
+        padding: 100px 40px 120px 40px;
         gap: 50px;
     }
 
@@ -487,7 +506,7 @@
     }
 
     .footer {
-        padding: 60px 40px;
+        padding: 80px 40px;
     }
 
     .footer__menu-link,
@@ -495,8 +514,12 @@
         font-size: 16px;
     }
 
+    .footer__menu-list-item {
+        margin-bottom: 4px;
+    }
+
     .footer__social-list {
-        gap: 12px;
+        gap: 20px;
     }
 
     .footer__social-icon {
