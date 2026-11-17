@@ -368,3 +368,9 @@
     width: 40px; /* Размер иконок соцсетей */
     height: 40px;
 }
+/* Принудительное выравнивание */
+body, header, main, footer, section, .cover, .lots, .about {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
