@@ -93,7 +93,7 @@
     background-position: center;
     min-height: 757px;
     position: relative;
-    padding: 165px 50px 50px 50px;
+    padding: 200px 50px 50px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,7 +116,7 @@
 }
 
 .cover__title {
-    margin: 0;
+    margin: 150px;
     color: #fff;
     font-size: 100px;
     font-weight: bold;
