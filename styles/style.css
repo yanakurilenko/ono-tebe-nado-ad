@@ -204,7 +204,7 @@
 
 .lots__card-list-item {
     width: 316px;
-    min-height: 450px;
+    min-height: 650px;  /* ← было 450px, увеличено до 650px */
 }
 
 .card-link {
@@ -219,7 +219,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 30px;
+    padding: 50px 30px;  /* ← было 40px, увеличено до 50px */
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
@@ -267,6 +267,19 @@
     width: fit-content;
 }
 
+/* Адаптация под 1100px */
+@media (max-width: 1100px) {
+    .lots {
+        padding: 60px 20px;
+    }
+
+    .lots__card-list-item {
+        width: calc(50% - 13px);
+        min-width: 280px;
+        min-height: 550px;  /* ← тоже увеличено для адаптивной версии */
+    }
+}
+
 /* =========================================
    СЕКЦИЯ ОБ АУКЦИОНЕ (ABOUT)
    ========================================= */
@@ -298,14 +311,11 @@
     object-fit: contain;
 }
 
-/* ПРАВАЯ КОЛОНКА: grid с двумя строками */
 .about__column_text {
     display: grid;
-    /* Первая строка = высоте логотипа, вторая — авто */
     grid-template-rows: 240px auto;
 }
 
-/* Заголовок центрируется по вертикали в первой строке (по центру круга) */
 .about__title {
     align-self: center;
     font-size: 40px;
@@ -313,7 +323,6 @@
     margin: 0;
 }
 
-/* Текст идёт во второй строке */
 .about__text {
     display: flex;
     flex-direction: column;
@@ -382,4 +391,77 @@
 .footer__social-icon {
     width: 40px;
     height: 40px;
+}
+
+/* =========================================
+   АДАПТАЦИЯ ПОД 1100px
+   ========================================= */
+@media (max-width: 1100px) {
+    /* Шапка */
+    .header {
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .header__links-list {
+        gap: 15px;
+    }
+
+    .header__links-list-item {
+        margin-left: 10px;
+    }
+
+    .header__logo {
+        width: 120px;
+    }
+
+    .address {
+        font-size: 16px;
+    }
+
+    .header__address {
+        max-width: 200px;
+    }
+
+    /* Обложка */
+    .cover {
+        padding: 120px 30px 40px 30px;
+        min-height: 600px;
+    }
+
+    .cover__title {
+        font-size: 72px;
+        letter-spacing: 6px;
+    }
+
+    .cover__description-text {
+        font-size: 18px;
+        word-spacing: 8px;
+    }
+
+    .bet-button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    /* Лоты */
+    .lots {
+        padding: 60px 20px;
+    }
+
+    .lots__card-list-item {
+        width: calc(50% - 13px);
+        min-width: 280px;
+    }
+
+    /* Об аукционе */
+    .about {
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    /* Подвал */
+    .footer {
+        padding: 30px 20px;
+    }
 }
