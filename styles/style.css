@@ -5,26 +5,26 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 50px;
+    padding: 40px 50px;
     box-sizing: border-box;
 }
 
 .header__menu {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .header__links-list {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
 
 .header__links-list-item {
     list-style: circle;
-    margin-left: 15px;
+    margin-left: 12px;
 }
 
 .header__links-list-item_no-bullit {
@@ -34,7 +34,7 @@
 
 .header__link {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: #000;
 }
 
@@ -48,7 +48,7 @@
 
 .header__logo {
     display: block;
-    width: 148px;
+    width: 140px;
     justify-self: center;
 }
 
@@ -65,13 +65,13 @@
     flex-direction: column;
     align-items: flex-start;
     font-style: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
 }
 
 .header__address {
     justify-self: end;
-    max-width: 240px;
+    max-width: 220px;
     align-items: flex-end;
     text-align: right;
 }
@@ -96,9 +96,9 @@
     background-image: url('../images/cover.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 757px;
+    min-height: 700px;
     position: relative;
-    padding: 165px 50px 50px 50px;
+    padding: 140px 50px 60px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -124,10 +124,10 @@
 .cover__title {
     margin: 0;
     color: #fff;
-    font-size: 100px;
+    font-size: 90px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     line-height: 1.1;
 }
 
@@ -156,8 +156,8 @@
 .cover__description-text {
     margin: 0;
     color: #fff;
-    font-size: 22px;
-    word-spacing: 15px;
+    font-size: 20px;
+    word-spacing: 12px;
     text-transform: uppercase;
 }
 
@@ -165,8 +165,8 @@
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 12px 28px;
+    font-size: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
@@ -182,12 +182,12 @@
    СЕКЦИЯ ЛОТЫ (LOTS)
    ========================================= */
 .lots {
-    padding: 100px 50px;
+    padding: 80px 50px;
     box-sizing: border-box;
 }
 
 .lots__heading {
-    font-size: 40px;
+    font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 30px;
     margin-left: 0;
@@ -199,12 +199,12 @@
     margin: 0 0 30px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 20px;
 }
 
 .lots__card-list-item {
-    width: 316px;
-    min-height: 650px;
+    width: 310px;
+    min-height: 600px;
 }
 
 .card-link {
@@ -219,7 +219,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 50px 30px;
+    padding: 45px 28px;
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
@@ -246,21 +246,21 @@
 }
 
 .card__title {
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 5px;
 }
 
 .card__text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
 }
 
 .lots__look-more-link {
     display: block;
     margin-left: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
     text-decoration: none;
     border-bottom: 1px solid #000;
@@ -272,16 +272,16 @@
    ========================================= */
 .about {
     display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 60px;
-    padding: 80px 50px;
+    grid-template-columns: 220px 1fr;
+    gap: 50px;
+    padding: 70px 50px;
     align-items: start;
     box-sizing: border-box;
 }
 
 .about__logo {
-    width: 240px;
-    height: 240px;
+    width: 220px;
+    height: 220px;
     background-color: #000;
     border-radius: 50%;
     position: relative;
@@ -293,19 +293,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
 }
 
 .about__column_text {
     display: grid;
-    grid-template-rows: 240px auto;
+    grid-template-rows: 220px auto;
 }
 
 .about__title {
     align-self: center;
-    font-size: 40px;
+    font-size: 36px;
     text-transform: uppercase;
     margin: 0;
 }
@@ -313,12 +313,12 @@
 .about__text {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
 }
 
 .about__text p {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -328,7 +328,7 @@
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 50px;
+    padding: 40px 50px;
     align-items: start;
     box-sizing: border-box;
 }
@@ -349,13 +349,13 @@
 }
 
 .footer__menu-list-item {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .footer__menu-link {
     text-decoration: none;
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .footer__menu-link_active {
@@ -371,22 +371,21 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    gap: 18px;
     justify-self: end;
 }
 
 .footer__social-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
 }
 
 /* =========================================
    АДАПТАЦИЯ ПОД 1100px
    ========================================= */
 @media (max-width: 1100px) {
-    /* Шапка — уменьшаем padding и размеры */
     .header {
-        padding: 30px 20px;
+        padding: 30px 25px;
         gap: 10px;
     }
 
@@ -399,7 +398,7 @@
     }
 
     .header__logo {
-        width: 120px;
+        width: 110px;
     }
 
     .address {
@@ -410,30 +409,28 @@
         max-width: 180px;
     }
 
-    /* Обложка */
     .cover {
-        padding: 100px 30px 40px 30px;
-        min-height: 600px;
+        padding: 100px 30px 50px 30px;
+        min-height: 580px;
     }
 
     .cover__title {
-        font-size: 72px;
+        font-size: 68px;
         letter-spacing: 6px;
     }
 
     .cover__description-text {
-        font-size: 18px;
+        font-size: 16px;
         word-spacing: 8px;
     }
 
     .bet-button {
-        padding: 12px 24px;
+        padding: 10px 22px;
         font-size: 16px;
     }
 
-    /* Лоты — карточки остаются 3 в ряд, но чуть уже */
     .lots {
-        padding: 60px 20px;
+        padding: 60px 25px;
     }
 
     .lots__card-list {
@@ -441,39 +438,51 @@
     }
 
     .lots__card-list-item {
-        width: 300px;
-        min-height: 550px;
+        width: 290px;
+        min-height: 520px;
     }
 
     .card {
-        padding: 40px 25px;
+        padding: 35px 22px;
     }
 
     .card__title {
-        font-size: 20px;
-    }
-
-    .card__text {
-        font-size: 16px;
-    }
-
-    /* Об аукционе */
-    .about {
-        padding: 60px 20px;
-        gap: 40px;
-    }
-
-    .about__title {
-        font-size: 32px;
-    }
-
-    .about__text p {
         font-size: 18px;
     }
 
-    /* Подвал */
+    .card__text {
+        font-size: 14px;
+    }
+
+    .about {
+        padding: 50px 25px;
+        gap: 35px;
+    }
+
+    .about__logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about__logo-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about__column_text {
+        grid-template-rows: 200px auto;
+    }
+
+    .about__title {
+        font-size: 30px;
+    }
+
+    .about__text p {
+        font-size: 16px;
+    }
+
     .footer {
-        padding: 30px 20px;
+        padding: 30px 25px;
     }
 
     .footer__menu-link,
@@ -482,7 +491,7 @@
     }
 
     .footer__social-icon {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 }
