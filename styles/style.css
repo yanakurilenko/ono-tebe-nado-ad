@@ -84,16 +84,18 @@
 }
 
 /* =========================================
-   ОБЛОЖКА (COVER)
+   ОБЛОЖКА (COVER) — ИСПРАВЛЕНО
    ========================================= */
 
 .cover {
     background-image: url('../images/cover.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 757px;
+    /* Уменьшили высоту, чтобы не была больше эталона */
+    min-height: 680px; 
     position: relative;
-    padding: 200px 50px 50px 50px;
+    /* Убрали огромный верхний отступ */
+    padding: 150px 50px 50px 50px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,12 +118,15 @@
 }
 
 .cover__title {
-    margin: 150px;
+    /* Убрали margin: 150px, он ломал всё */
+    margin: 0; 
     color: #fff;
-    font-size: 100px;
+    /* Уменьшили шрифт, чтобы соответствовал эталону */
+    font-size: 90px; 
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    /* Увеличили расстояние между буквами */
+    letter-spacing: 15px; 
     line-height: 1.1;
 }
 
@@ -171,7 +176,7 @@
 }
 
 /* =========================================
-   СЕКЦИЯ ЛОТЫ (LOTS)
+   СЕКЦИЯ ЛОТЫ (LOTS) — ИСПРАВЛЕНО
    ========================================= */
 
 .lots {
@@ -182,7 +187,7 @@
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 30px;
-    margin-left: 30px;
+    margin-left: 0; /* Выровняли по левому краю */
 }
 
 .lots__card-list {
@@ -191,12 +196,12 @@
     margin: 0 0 30px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px; /* Чуть увеличили отступ между карточками */
 }
 
-
 .lots__card-list-item {
-    width: 316px;
+    /* Увеличили карточки, как в эталоне */
+    width: 340px; 
     min-height: 450px;
 }
 
@@ -252,7 +257,7 @@
 
 .lots__look-more-link {
     display: block;
-    margin-left: 30px;
+    margin-left: 0; /* Выровняли по левому краю */
     font-size: 20px;
     color: #000;
     text-decoration: none;
@@ -261,31 +266,31 @@
 }
 
 /* =========================================
-   СЕКЦИЯ ОБ АУКЦИОНЕ (ABOUT)
+   СЕКЦИЯ ОБ АУКЦИОНЕ (ABOUT) — ИСПРАВЛЕНО
    ========================================= */
 
 .about {
     display: grid;
-    /* Левая колонка равна ширине карточки (316px), правая занимает всё остальное */
-    grid-template-columns: 316px 1fr;
+    /* Увеличили левую колонку, чтобы логотип встал по центру */
+    grid-template-columns: 340px 1fr; 
     gap: 50px;
     padding: 100px 50px;
-    align-items: start; /* Выравниваем по верхнему краю */
+    align-items: start;
 }
 
 .about__logo {
     width: 240px;
     height: 240px;
     background-color: #000;
-    border-radius: 50%; /* Делаем круг */
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Центрируем сам круг внутри левой колонки */
+    margin: 0 auto; 
 }
 
 .about__logo-image {
-    width: 140px; /* Размер логотипа внутри круга (подберите по макету) */
+    width: 140px; 
 }
 
 .about__title {
@@ -298,7 +303,7 @@
 .about__text {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Отступ между параграфами */
+    gap: 20px; 
 }
 
 .about__text p {
@@ -313,18 +318,15 @@
 
 .footer {
     display: grid;
-    /* 3 колонки: адрес, меню, соцсети */
     grid-template-columns: 1fr 1fr 1fr;
     padding: 50px;
     align-items: start;
 }
 
-/* Адрес в подвале прижимаем к левому краю */
 .footer__address {
     justify-self: start;
 }
 
-/* Меню в подвале выравниваем по центру */
 .footer__menu {
     justify-self: center;
 }
@@ -354,7 +356,6 @@
     text-decoration: underline;
 }
 
-/* Соцсети прижимаем к правому краю */
 .footer__social-list {
     list-style: none;
     padding: 0;
@@ -365,12 +366,8 @@
 }
 
 .footer__social-icon {
-    width: 40px; /* Размер иконок соцсетей */
+    width: 40px; 
     height: 40px;
 }
-/* Принудительное выравнивание */
-body, header, main, footer, section, .cover, .lots, .about {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-}
+
+/* УДАЛЕН БЛОК С !IMPORTANT В КОНЦЕ, ОН ЛОМАЛ ВЕРСТКУ */
